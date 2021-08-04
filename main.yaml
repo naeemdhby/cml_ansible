@@ -1,0 +1,7 @@
+---
+- name : Vlan creation
+- hosts: switches
+
+
+  roles:
+   - vlan
