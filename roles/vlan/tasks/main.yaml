@@ -3,3 +3,5 @@
     backup: yes
     src: vlan.j2
     match: none
+  vars:
+    ansible_command_timeout: 60
