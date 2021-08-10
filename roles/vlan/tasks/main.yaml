@@ -1,9 +1,5 @@
-- name: Show VLAN
-  ios_command:
-    host: "{{ ansible_host }}"
-    username: "{{ ciscousername }}"
-    password: "{{ ciscopassword }}"
-    commands: show version
-  register: show_vlan
-
-- debug: var=show_vlan.stdout_lines
+  - name: add vlan test
+    ios_config:
+      backup: yes
+      src: vlan.j2
+      match: none
