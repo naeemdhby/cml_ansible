@@ -11,3 +11,5 @@
   cisco.ios.ios_facts:
     gather_subset:
     - config
+  vars:
+      ansible_command_timeout: 60
