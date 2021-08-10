@@ -1,8 +1,7 @@
 ---
 - name : Vlan creation
   hosts: switches
-  connection: local
-  user: naeim
+  gather_facts: false
 
 
   roles:
