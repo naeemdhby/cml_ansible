@@ -7,9 +7,8 @@
 #     ansible_command_timeout: 30
 
 
-- name: gather fact
-  cisco.ios.ios_facts:
-    gather_subset:
-    - config
+- name: run show version on remote devices
+    ios_command:
+      commands: show version
   vars:
       ansible_command_timeout: 60
