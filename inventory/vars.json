@@ -1,7 +1,7 @@
 {
     "vlans":[
-    {   "vlan": "100", "name_1": "sanofi-mgmt", "name_2": "CUST1-CE" },
-    {   "vlan": "101", "name_1": "sanofi-voice", "name_2": "CUST2-CE" },
-    {   "vlan": "102", "name_1": "sanofi-servers", "name_2": "CUST48-CE" }
+    {   "vlan": "100", "name": "sanofi-mgmt" },
+    {   "vlan": "101", "name": "sanofi-voice" },
+    {   "vlan": "102", "name": "sanofi-servers" }
     ]
  }

@@ -1,11 +1,5 @@
-{% for vlan in range(500,551) %}
-  vlan 3
-    name CUST3-VRF
-     private-vlan primary
-     private-vlan association 13
-     exit
-  vlan 13
-    name CUST3-CE
-     private-vlan isolated
+{% for vlan in vlans %}
+  vlan {vlan}
+    name {{vlan.name}}
      exit
 {% endfor %}
