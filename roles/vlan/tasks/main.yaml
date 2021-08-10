@@ -3,3 +3,4 @@
       backup: yes
       src: vlan.j2
       match: none
+      timeout: 30
