@@ -1,15 +1,5 @@
-# - name: add vlan test
-#   ios_config:
-#     backup: yes
-#     src: vlan.j2
-#     match: none
-#   vars:
-#     ansible_command_timeout: 30
-
-
-- name: gather fact
-  cisco.ios.ios_facts:
-    gather_subset:
-    - config
-  vars:
-      ansible_command_timeout: 60
+- name: add vlan test
+  ios_config:
+    backup: yes
+    src: vlan.j2
+    match: none
