@@ -1,3 +1,5 @@
-  vlan 3
-    name 3
+{% for item in vlans %}
+  vlan {{item.vlan}}
+    name {{item..name}}
      exit
+{% endfor %}
