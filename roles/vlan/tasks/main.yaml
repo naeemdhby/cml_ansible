@@ -1,6 +1,6 @@
 - name: debug to jason
   debug:
-    msg: "{{ vlans | from_json}}"
+    msg: "{{ vlans['101'] }}"
   register: jason_vlan
   ignore_errors: yes
 - name: debug 101
