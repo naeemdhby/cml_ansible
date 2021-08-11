@@ -2,12 +2,12 @@
   debug:
     msg: "{{ vlans | to_json}}"
   register: jason_vlan
-- name: debug
+# - name: debug
+#   debug:
+#     msg: "{{ vlans[101] }}"
+# - name: debug
   debug:
-    msg: "{{ vlans[101] }}"
-- name: debug
-  debug:
-    msg: "{{ jason_vlan.101}}"
+    msg: "{{ jason_vlan.101 }}"
 - name: debug
   debug:
     msg: "{{ vlans.101.name | to_json}}"
