@@ -1,6 +1,6 @@
 - name: debug
   debug:
-    var: vlans.101
+    var: vlans[101].name
 - name: add vlan test
   ios_config:
     backup: yes
