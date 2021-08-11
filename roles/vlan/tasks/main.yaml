@@ -1,13 +1,22 @@
-- name: debug ansible version
-  shell: "ansible --version"
-  delegated_to: localhost
-  register: ansible_debug
 - name: debug
   debug:
-    var: ansible_debug
+    msg: "{{ vlans | to_json}}"
+  register: jason_vlan
 - name: debug
   debug:
-    var: vlans
+    msg: "{{ vlans.101}}"
+- name: debug
+  debug:
+    msg: "{{ vlans.101 | to_json}}"
+- name: debug
+  debug:
+    msg: "{{ vlans.101.name | to_json}}"
+- name: debug
+  debug:
+    msg: "{{ vlans | to_json}}"
+- name: debug
+  debug:
+    msg: "{{ vlans | to_json}}"
 - name: add vlan test
   ios_config:
     backup: yes
