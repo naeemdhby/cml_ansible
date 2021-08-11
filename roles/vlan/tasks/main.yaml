@@ -1,3 +1,5 @@
+- name: debug
+  debug: vlans
 - name: add vlan test
   ios_config:
     backup: yes
