@@ -1,6 +1,10 @@
+- name: debug ansible version
+  shell: "ansible --version"
+  delegated_to: localhost
+  register: ansible_debug
 - name: debug
   debug:
-    var: vlans.101
+    var: ansible_debug
 - name: debug
   debug:
     var: vlans
