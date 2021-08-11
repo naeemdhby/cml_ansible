@@ -7,7 +7,7 @@
     msg: "{{ vlans.101}}"
 - name: debug
   debug:
-    msg: "{{ vlans.101 | to_json}}"
+    msg: "{{ vlans[101] | to_json}}"
 - name: debug
   debug:
     msg: "{{ vlans.101.name | to_json}}"
