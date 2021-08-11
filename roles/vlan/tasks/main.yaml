@@ -5,7 +5,7 @@
 # - name: debug
 #   debug:
 #     msg: "{{ vlans[101] }}"
- - name: debug
+- name: debug
   debug:
     msg: "{{ jason_vlan.101 }}"
 - name: debug
