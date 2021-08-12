@@ -1,9 +1,9 @@
-# - name: debug to jason
-#   debug:
-#     msg: "{{ vlans['101'] }}"
-#   register: jason_vlan
-#   ignore_errors: yes
-
+- name: debug to jason
+  debug:
+    msg: "{{ vlans['sanofi-mgmt'] }}"
+  register: jason_vlan
+  ignore_errors: yes
+  
 - name: add vlan test
   ios_config:
     backup: yes
