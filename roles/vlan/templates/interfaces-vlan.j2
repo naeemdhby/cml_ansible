@@ -3,10 +3,12 @@
 {% for swp in vlans[vlan].switchports %}
   interface {{ swp }}
   {%if 'access' in vlans[vlan].switchports[swp].mode %}
-  switchport {{ vlans[vlan].switchports[swp].mode }} vlan {{ vlans[vlan].vlan_id }}
+  switchport access vlan {{ vlans[vlan].vlan_id }}
   {% endif %}
   {%if 'trunk' in vlans[vlan].switchports[swp].mode %}
-  switchport {{ vlans[vlan].switchports[swp].mode }} allowed vlan add {{ vlans[vlan].vlan_id }}
+  switchport trunk encapsulation dot1q
+  switchport mode trunk
+  switchport trunk allowed vlan add {{ vlans[vlan].vlan_id }}
   {% endif %}
   exit
 {% endfor %}
