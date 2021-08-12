@@ -1,7 +1,0 @@
-{
-    "vlans":[
-    {   "vlan": "100", "name": "sanofi-mgmt" },
-    {   "vlan": "101", "name": "sanofi-voice" },
-    {   "vlan": "102", "name": "sanofi-servers" }
-    ]
- }

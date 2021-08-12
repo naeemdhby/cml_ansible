@@ -2,7 +2,12 @@
 {%if vlans[vlan].switchports is defined %}
 {% for swp in vlans[vlan].switchports %}
   interface {{ swp }}
-  switchport {{ vlans[vlan].switchports[swp].mode }} vlan {{ vlans[vlan].vlan_id}}
+  {%if vlans[vlan].switchports[swp].mode == "access" %}
+  switchport {{ vlans[vlan].switchports[swp].mode }} vlan {{ vlans[vlan].vlan_id }}
+  {% endif %}
+  {%if vlans[vlan].switchports[swp].mode == "trunk" %}
+  switchport {{ vlans[vlan].switchports[swp].mode }} allowed vlan add {{ vlans[vlan].vlan_id }}
+  {% endif %}
   exit
 {% endfor %}
 {% endif %}

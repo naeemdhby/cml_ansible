@@ -1,9 +1,7 @@
 ---
-- name : Vlan creation
-  hosts: switches
+- name : VLAN Creation
+  hosts: "{{ hosts }}"
   gather_facts: false
-  # vars_files:
-  #    - "./inventory/vars.ini"
 
 
   roles:
