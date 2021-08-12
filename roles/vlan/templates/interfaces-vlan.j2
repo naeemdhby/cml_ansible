@@ -2,7 +2,7 @@
 {%if vlans[vlan].switchports is defined %}
 {% for swp in vlans[vlan].switchports %}
   interface {{ swp }}
-  switchport {{ vlans[vlan].switchports[swp].mode }} vlan {{ vlans[item].vlan_id}}
+  switchport {{ vlans[vlan].switchports[swp].mode }} vlan {{ vlans[vlan].vlan_id}}
   exit
 {% endfor %}
 {% endif %}
