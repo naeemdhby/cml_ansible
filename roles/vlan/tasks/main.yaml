@@ -4,8 +4,14 @@
   register: jason_vlan
   ignore_errors: yes
   
-- name: add vlan test
+- name: add VLANs
   ios_config:
     backup: yes
     src: vlan.j2
+    match: none
+
+- name: Add interfaces to vlan
+  ios_config:
+    backup: yes
+    src: interfaces-vlan.j2
     match: none

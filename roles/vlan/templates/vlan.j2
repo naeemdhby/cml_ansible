@@ -1,5 +1,8 @@
 {% for item in vlans %}
   vlan {{ vlans[item].vlan_id}}
     name {{item}}
+{%if vlans[item].vlan_type is defined %}
+     private-vlan {{ vlans[item].vlan_type }}
+{% endif %}
      exit
 {% endfor %}
