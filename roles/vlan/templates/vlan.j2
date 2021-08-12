@@ -1,5 +1,5 @@
 {% for item in vlans %}
-  vlan {{item}}
-    name {{vlans['{{item}}']}}
+  vlan {{item[vlan_id]}}
+    name {{item}}
      exit
 {% endfor %}
