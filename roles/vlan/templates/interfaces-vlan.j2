@@ -3,5 +3,6 @@
 {% for swp in vlans[item].switchports %}
   interface {{ vlans[item].switchports[swp] }}
   switchport {{ vlans[item].switchports[swp].mode }} vlan {{ vlans[item].vlan_id}}
+{% endfor %}
 {% endif %}
 {% endfor %}
