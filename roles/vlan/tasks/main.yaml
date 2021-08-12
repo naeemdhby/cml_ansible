@@ -1,6 +1,6 @@
 - name: debug to jason
   debug:
-    msg: "{{ vlans.sanofi-mgmt }}"
+    msg: "{{ vlans.'sanofi-mgmt' }}"
   register: jason_vlan
   ignore_errors: yes
   
