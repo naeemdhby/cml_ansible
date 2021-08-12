@@ -6,4 +6,11 @@
   exit
 {% endfor %}
 {% endif %}
+{%if vlans[vlan].switchportsrange is defined %}
+{% for swp in vlans[vlan].switchportsrange %}
+  interface range {{ swp }}
+  switchport {{ vlans[vlan].switchportsrange[swp].mode }} vlan {{ vlans[vlan].vlan_id}}
+  exit
+{% endfor %}
+{% endif %}
 {% endfor %}
